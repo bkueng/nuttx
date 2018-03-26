@@ -399,7 +399,7 @@ static const struct uart_ops_s g_uart_dma_ops =
 static char g_uart0rxbuffer[CONFIG_UART0_RXBUFSIZE];
 static char g_uart0txbuffer[CONFIG_UART0_TXBUFSIZE];
 # ifdef CONFIG_UART0_RXDMA
-static char g_uart0rxfifo[RXDMA_BUFFER_SIZE];
+static char g_uart0rxfifo[RXDMA_BUFFER_SIZE]
   __attribute__((aligned(ARMV7M_DCACHE_LINESIZE)));
 # endif
 #endif
